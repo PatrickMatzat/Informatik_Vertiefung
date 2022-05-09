@@ -28,8 +28,8 @@ public class Film  implements Comparable {
     }
     
     public int compareTo(Comparable other) {
-        if(other instanceof Film) {
-            return this.compareTo(other);
+        if(other instanceof Film){
+            return this.titel.compareTo(other.titel); //titel cannot be resolved or is not a field. Warum?
         }else {
             return 0;
         }
