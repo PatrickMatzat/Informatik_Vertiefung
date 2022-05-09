@@ -10,7 +10,11 @@ public class Wort implements Text{
     }
 
     public void append(Text text){
-        this.w = this.w + text;
+        if (text instanceof Wort){
+            Wort wort = (Wort)text;
+            this.w = this.w + wort.getText();
+        }
+        
     }
 
 }
