@@ -5,7 +5,7 @@ public class TestMatrix{
         Double[][] array = { {1.0, 2.0}, {3.0, 4.0} };
 
         //Erstellen Matrixklasse Objekt
-        Matrix M( array );
+        Matrix M = new Matrix( array );
 
         //Anzahl der Matrix-Zeilen ausspielen
         System.out.println("Matrix-Zeilen: " + M.getNumRows());
@@ -13,7 +13,7 @@ public class TestMatrix{
         System.out.println("Matrix-Spalten: " + M.getNumCols());
 
         //Ändern ein einzelnes Matrix-Element.
-        M.set(10, 1, 1);
+        M.set(10.0, 1, 1);
         //Einzelnes Matrix-Element ausspielen
         System.out.println("Matrix-Element: " + M.get(1,1));
 
@@ -22,6 +22,7 @@ public class TestMatrix{
             for(int j=0;j<M.getNumCols();j++){
                 System.out.print(M.get(i,j) + " ");
             }
+            System.out.println("");
         }
            
     }  
