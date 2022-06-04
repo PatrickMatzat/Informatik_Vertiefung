@@ -63,8 +63,10 @@ public class LinkedList<T> {
 	public void addTail(T val) {
         //Add val in Tail of list
         ListElem node = new ListElem(val);
-        if(this.head == null){
+        if(this.head == null){ //If list is empty
             this.head = node;
+            this.tail = node;
+            return;
         }
         this.tail.next = node;
         this.tail = node;
@@ -182,7 +184,5 @@ public class LinkedList<T> {
         }
         return -1;
 	}
-
-    // TODO
     
 }
